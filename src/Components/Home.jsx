@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
     const [bookmarks, setBookmarks] = useState([])
-
+    const API = import.meta.env.VITE_BASE_URL
     useEffect(() => {
-        fetch('http://localhost:4001/bookmarks')
+        fetch(API)
             .then(res => res.json())
             .then(res => {
                 // console.log(res)

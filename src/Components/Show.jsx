@@ -4,10 +4,10 @@ import { useParams } from 'react-router-dom'
 const Show = () => {
     const [bookmark, setBookmark] = useState(null)
     const { index } = useParams()
-    
+    const API = import.meta.env.VITE_BASE_URL
 
     useEffect(() => {
-        fetch(`http://localhost:4001/bookmarks/${index}`)
+        fetch(`${API}/${index}`)
             .then(res => res.json())
             .then(res => {
                 // console.log(res)
