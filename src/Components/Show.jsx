@@ -32,14 +32,13 @@ const Show = () => {
     return (
         <div>
             { bookmark && 
-                <div>
+                <div className="bookmark">
                     <h2>{bookmark.name}</h2>
-                    <a href={bookmark.url} target="_blank">Take me there</a>
-                    <br/>
+                    <h4>Category: {bookmark.category}</h4>
+                    <a className="external-link" href={bookmark.url} target="_blank">Take me there</a>
                     <Link to={`/bookmarks/${index}/edit`}>
                         <button>Edit</button>
                     </Link>
-                    <br/>
                     <button onClick={handleDelete}>Delete</button>
                 </div> 
             }

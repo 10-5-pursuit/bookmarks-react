@@ -17,10 +17,10 @@ const Home = () => {
     }, [])
 
     return (
-        <div>
+        <div className="bookmark-container">
             { bookmarks.map((bookmark, i) => {
                 return (
-                    <div key={i}>
+                    <div key={i} className="bookmark-link">
                         <Link to={`/bookmarks/${i}`}>{bookmark.name}</Link>
                     </div>
                 )
